@@ -62,6 +62,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mysql第二课" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/20/mysql第二课/" class="article-date">
+  <time datetime="2019-10-20T03:03:46.000Z" itemprop="datePublished">2019-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/20/mysql第二课/">mysql第二课</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#mysql第二次课<br>/*<br>   数据库设计的三大范式<br>   第一范式：<br>      每个字段的数据都是不可分割<br>      的最小的数据单元<br>   第二范式<br>      每张表只能描述一件事情<br>      每张表必须有主键<br>   第三范式<br>      非主键字段依赖于主键字段<br>      换句话说，非主键字段与<br>      主键字段要直接相关<br>  注意：设计表时，尽可能遵守规范<br>     但是，有时为了性能，会牺牲<br>     一点规范<br>  Mysql运算符<br>    算术运算符<br>       + - * /<br>    逻辑运算符<br>       and or !<br>    比较运算符<br>       &gt; &lt; &gt;= &lt;= &lt;&gt; !=<br> 聚合函数<br> count() 求行数<br> sum() 求一列的和<br> avg() 去平均值<br> max() 求最大值<br> min() 求最小值<br>Mysql常用关键字<br> in   查询在什么什么选项中的数据<br>      where name in(‘张三’,’李四’)<br>      把name等于张三，等于李四的都<br>      查询出来<br> not in<br>     where name not in(‘张三’,’李四’)<br>     把name不等于张三，不等于李四<br>     的都查询出来<br> distinct 去重<br> limit 查询出表的前几行<br> between…and..在什么什么之间<br> as<br><em>/<br>SELECT * FROM goods;<br>INSERT INTO goods(gnam,gprice)<br>           VALUES(‘吹风机’,89);<br>INSERT INTO goods(gnam,gprice)<br>           VALUES(‘外套’,200);<br>INSERT INTO goods(gnam,gprice)<br>           VALUES(‘外套’,220);<br>INSERT INTO goods(gnam,gprice)<br>           VALUES(‘吹风机’,78);<br>#查询出商品价格大于10的商品<br>SELECT * FROM goods<br>       WHERE gprice&gt;10;<br>#查询商品价格不等于10的商品信息<br>SELECT * FROM goods<br>       WHERE gprice&lt;&gt;10;<br>#查询商品价格大于10并且小于50的<br>#商品信息<br>SELECT * FROM goods WHERE<br>       gprice&gt;10 AND gprice&lt;50;<br>#查询出商品的数量<br>#字段名 as 新字段名 给列名<br>#重命名成新的列名<br>SELECT COUNT(</em>) AS ‘总数量’<br>          FROM goods;<br>#查询商品的总价格<br>SELECT SUM(gprice) ‘总价格’<br>             FROM goods;<br>#查询商品的平均价格<br>SELECT AVG(gprice) ‘平均价格’<br>             FROM goods;<br>#查询商品的最高价格<br>SELECT MAX(gprice) ‘最高价格’<br>             FROM goods;<br>#查询商品的最低价格<br>SELECT MIN(gprice) ‘最低价格’<br>             FROM goods;<br>#查询出商品名称是小熊雨伞，外套的<br>#都查询出来<br>SELECT * FROM goods WHERE gnam<br>          IN(‘小熊雨伞’,’外套’);<br>SELECT * FROM goods WHERE gnam<br>       NOT IN(‘小熊雨伞’,’外套’);<br>#把商品名字去重<br>SELECT DISTINCT gnam FROM goods;<br>#查询goods表的前两行<br>#limit 0,2 从下标是0的<br>#行开始取两行<br>SELECT * FROM goods LIMIT 0,2;<br>#查询出价格处于10到50之间<br>#的商品信息<br>SELECT * FROM goods WHERE<br>       gprice BETWEEN 10 AND 50;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/20/mysql第二课/" data-id="ck1yf5t940001lkhooecqbbvl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-myspl第一课" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/15/myspl第一课/" class="article-date">
@@ -91,7 +128,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/myspl第一课/" data-id="ck1rtzmop0001bkhog4jzqlat" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/15/myspl第一课/" data-id="ck1yf5t8z0000lkhova35v0m3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/我的博客/" data-id="ck1rtzmow0002bkhocn0ie35p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/15/我的博客/" data-id="ck1yf5ta50002lkhotla4xexo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/hello-world/" data-id="ck1rtzmoi0000bkhop9is2zhb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/15/hello-world/" data-id="ck1yf5tat0003lkhouu3m051u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,6 +253,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/10/20/mysql第二课/">mysql第二课</a>
+          </li>
         
           <li>
             <a href="/2019/10/15/myspl第一课/">myspl第一课</a>
