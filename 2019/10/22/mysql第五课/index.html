@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>mysql第五课 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="/*mysql第五次课    数据库的优化       通过各种方式提高查询效率    其中优化途径之一为添加索引   什么是索引？      添加索引，就相当于，为某个字段      或某些字段添加了目录，这样的话      话大大提高查询效率   索引的分类？      普通索引      唯一索引        添加唯一约束，就默认添加了        唯一索引      主键索引">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql第五课">
+<meta property="og:url" content="http://yoursite.com/2019/10/22/mysql第五课/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/*mysql第五次课    数据库的优化       通过各种方式提高查询效率    其中优化途径之一为添加索引   什么是索引？      添加索引，就相当于，为某个字段      或某些字段添加了目录，这样的话      话大大提高查询效率   索引的分类？      普通索引      唯一索引        添加唯一约束，就默认添加了        唯一索引      主键索引">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-22T11:44:41.851Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql第五课">
+<meta name="twitter:description" content="/*mysql第五次课    数据库的优化       通过各种方式提高查询效率    其中优化途径之一为添加索引   什么是索引？      添加索引，就相当于，为某个字段      或某些字段添加了目录，这样的话      话大大提高查询效率   索引的分类？      普通索引      唯一索引        添加唯一约束，就默认添加了        唯一索引      主键索引">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mysql第五课" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/22/mysql第五课/" class="article-date">
+  <time datetime="2019-10-22T11:43:25.000Z" itemprop="datePublished">2019-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mysql第五课
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>/*mysql第五次课<br>    数据库的优化<br>       通过各种方式提高查询效率</p>
+<p>   其中优化途径之一为添加索引<br>   什么是索引？<br>      添加索引，就相当于，为某个字段<br>      或某些字段添加了目录，这样的话<br>      话大大提高查询效率<br>   索引的分类？<br>      普通索引<br>      唯一索引<br>        添加唯一约束，就默认添加了<br>        唯一索引<br>      主键索引<br>        添加主键约束，就默认添加了<br>        主键索引<br>      组合索引<br>      全文索引<br>      空间索引<br>  创建索引<br>    1、在创建表的同时，创建索引<br>    2、通过alter table语句<br>    3、create index<br>二、事务<br>  几条语句组成一个整体，要么全部执行<br>  成功，要全部执行失败，那么这几条<br>  语句就组成了一个事务。<br>  其实每条语句都是一个自动提交的事务<br>  1、关闭自动提交<br>  2、开启事务 begin<br>  3、执行语句，如果失败，<br>             全部回滚 rollback<br>  4、如果全部成功，提交事务 commit<br>事务的特性<br>  原子性<br>     事务是一个整体，要么全部成功<br>     要么全部失败<br>  一致性<br>     事务执行前后，数据的状态应该<br>     一致的<br>  隔离性<br>     事务相互独立，互不相影响<br>  永久性<br>     事务一旦对数据进行更改，造成<br>     的影响是永久的<br>隔离级别<br>未提交读(read uncommitted)<br>已提交读(read committed)<br>可重复读(repeatable read)<br>可串行化(seriarizable)  </p>
+<p> */<br>CREATE TABLE emp2(<br> eid INT PRIMARY KEY AUTO_INCREMENT,<br> enam VARCHAR(20) NOT NULL,<br> etel VARCHAR(20) UNIQUE,<br> INDEX(enam)  #为enam添加普通索引<br>)<br>SHOW INDEX FROM emp2;<br>#创建索引<br>#创建普通索引<br>CREATE INDEX index_name ON<br>          table_name(colname);<br>#创建唯一索引<br>CREATE UNIQUE INDEX index_name ON<br>          table_name(colname);</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/22/mysql第五课/" data-id="ck21s7n26000018hompk2ndhj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/20/mysql第三课/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mysql第三课</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/22/mysql第五课/">mysql第五课</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/mysql第三课/">mysql第三课</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/mysql第二课/">mysql第二课</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/15/myspl第一课/">myspl第一课</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

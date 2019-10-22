@@ -62,6 +62,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mysql第五课" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/22/mysql第五课/" class="article-date">
+  <time datetime="2019-10-22T11:43:25.000Z" itemprop="datePublished">2019-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/22/mysql第五课/">mysql第五课</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>/*mysql第五次课<br>    数据库的优化<br>       通过各种方式提高查询效率</p>
+<p>   其中优化途径之一为添加索引<br>   什么是索引？<br>      添加索引，就相当于，为某个字段<br>      或某些字段添加了目录，这样的话<br>      话大大提高查询效率<br>   索引的分类？<br>      普通索引<br>      唯一索引<br>        添加唯一约束，就默认添加了<br>        唯一索引<br>      主键索引<br>        添加主键约束，就默认添加了<br>        主键索引<br>      组合索引<br>      全文索引<br>      空间索引<br>  创建索引<br>    1、在创建表的同时，创建索引<br>    2、通过alter table语句<br>    3、create index<br>二、事务<br>  几条语句组成一个整体，要么全部执行<br>  成功，要全部执行失败，那么这几条<br>  语句就组成了一个事务。<br>  其实每条语句都是一个自动提交的事务<br>  1、关闭自动提交<br>  2、开启事务 begin<br>  3、执行语句，如果失败，<br>             全部回滚 rollback<br>  4、如果全部成功，提交事务 commit<br>事务的特性<br>  原子性<br>     事务是一个整体，要么全部成功<br>     要么全部失败<br>  一致性<br>     事务执行前后，数据的状态应该<br>     一致的<br>  隔离性<br>     事务相互独立，互不相影响<br>  永久性<br>     事务一旦对数据进行更改，造成<br>     的影响是永久的<br>隔离级别<br>未提交读(read uncommitted)<br>已提交读(read committed)<br>可重复读(repeatable read)<br>可串行化(seriarizable)  </p>
+<p> */<br>CREATE TABLE emp2(<br> eid INT PRIMARY KEY AUTO_INCREMENT,<br> enam VARCHAR(20) NOT NULL,<br> etel VARCHAR(20) UNIQUE,<br> INDEX(enam)  #为enam添加普通索引<br>)<br>SHOW INDEX FROM emp2;<br>#创建索引<br>#创建普通索引<br>CREATE INDEX index_name ON<br>          table_name(colname);<br>#创建唯一索引<br>CREATE UNIQUE INDEX index_name ON<br>          table_name(colname);</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/22/mysql第五课/" data-id="ck21s7n26000018hompk2ndhj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-mysql第三课" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/20/mysql第三课/" class="article-date">
@@ -107,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/20/mysql第三课/" data-id="ck1yfjvn70002wghobcm6icoa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/20/mysql第三课/" data-id="ck21s7n2z000118hohhcjmx0n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/20/mysql第二课/" data-id="ck1yfjvna0004wghoq4xuuy9b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/20/mysql第二课/" data-id="ck21s7n30000218ho25278yhf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,93 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/myspl第一课/" data-id="ck1yfjvn40001wghopr0czu6r" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/15/我的博客/" class="article-date">
-  <time datetime="2019-10-15T12:21:04.000Z" itemprop="datePublished">2019-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/我的博客/">我的博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#我的博客</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/我的博客/" data-id="ck1yfjvn90003wgho1xx05xjd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/15/hello-world/" class="article-date">
-  <time datetime="2019-10-15T12:12:03.148Z" itemprop="datePublished">2019-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/hello-world/" data-id="ck1yfjvmx0000wghompmn8g2m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/15/myspl第一课/" data-id="ck21s7n34000318hoadlmmbsv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -310,6 +263,10 @@
       <ul>
         
           <li>
+            <a href="/2019/10/22/mysql第五课/">mysql第五课</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/20/mysql第三课/">mysql第三课</a>
           </li>
         
@@ -319,14 +276,6 @@
         
           <li>
             <a href="/2019/10/15/myspl第一课/">myspl第一课</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/15/我的博客/">我的博客</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/15/hello-world/">Hello World</a>
           </li>
         
       </ul>
