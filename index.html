@@ -62,6 +62,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-动态网站开发第一次课讲义" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/01/动态网站开发第一次课讲义/" class="article-date">
+  <time datetime="2019-12-01T05:46:50.000Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/动态网站开发第一次课讲义/">动态网站开发第一次课讲义</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、WEB相关概念<br>1、软件架构</p>
+<p>1)    C/S：客户端/服务器端<br>        例如：360安全卫士、QQ等<br>2)    B/S：浏览器/服务器端<br>            例如：淘宝网、京东网、微博、bilibili等<br>2. 资源分类</p>
+<p>1)    静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源.静态资源可以直接被浏览器解析如： html,css,JavaScript<br>2)    动态资源:每个用户访问相同资源后，得到的结果可能不一样。称为动态资源。动态资源被访问后，需要先转换为静态资源，在返回给浏览器如：servlet/jsp,php,asp….<br>3. 网络通信三要素</p>
+<p>1)    IP：电子设备(计算机)在网络中的唯一标识。<br>2)    端口：应用程序在计算机中的唯一标识。 0~65536<br>3)    传输协议：规定了数据传输的规则<br>4. 基础协议：</p>
+<p>1)    tcp:安全协议，三次握手、四次挥手。 速度稍慢<br>2)    udp：不安全协议。 速度快<br>2、WEB服务器<br>1、服务器：安装了服务器软件的计算机<br>2、服务器软件：接收用户的请求，处理请求，做出响应<br>3、web服务器软件：接收用户的请求，处理请求，做出响应。<br>在web服务器软件中，可以部署web项目，让用户通过浏览器来访问这些项目<br>web容器<br>4、常见的java相关的web服务器软件：<br>Tomcat：Apache基金组织，中小型的JavaEE服务器，仅仅支持少量的JavaEE规范<br>servlet/jsp。开源的，免费<br>webLogic：oracle公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的。<br>webSphere：IBM公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的。<br>JBOSS：JBOSS公司的，大型的JavaEE服务器，支持所有的JavaEE规范，收费的。<br>5、Tomcat服务器下载、安装、启动、关闭</p>
+<ol>
+<li><p>下载：<a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://tomcat.apache.org/</a> </p>
+</li>
+<li><p>安装：解压压缩包即可。<br>注意：安装目录建议不要有中文和空格</p>
+</li>
+<li><p>卸载：删除目录就行了</p>
+</li>
+<li><p>启动：<br>bin/startup.bat ,双击运行该文件即可</p>
+</li>
+</ol>
+<p>6、访问：浏览器输入：<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> 回车访问自己<br><a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> 访问别人</p>
+<p>7、tomcat的关闭</p>
+<ol>
+<li>正常关闭：</li>
+</ol>
+<ul>
+<li>bin/shutdown.bat</li>
+<li>ctrl+c</li>
+</ul>
+<ol start="2">
+<li>强制关闭：</li>
+</ol>
+<ul>
+<li>点击启动窗口的×<br>注意8.5启动过程中可能会遇到乱码问题，可以用以下方法解决<br>打开tomcat/conf/目录<br>修改logging.properties<br>找到<br>java.util.logging.ConsoleHandler.encoding = utf-8这行<br>更改为<br>java.util.logging.ConsoleHandler.encoding = GBK</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/01/动态网站开发第一次课讲义/" data-id="ck3ml60sn0000bkhonnklb9ug" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaWeb第一课" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/23/JavaWeb第一课/" class="article-date">
@@ -202,7 +268,7 @@ public static void selectStu(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/JavaWeb第一课/" data-id="ck22rh3dq00001shouaz9vmcd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/23/JavaWeb第一课/" data-id="ck3ml60su0001bkhoxrs9adaf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,7 +307,7 @@ public static void selectStu(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/22/mysql第五课/" data-id="ck22rh3fs00041sho8ah5addj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/22/mysql第五课/" data-id="ck3ml60tn0005bkhoyp7zzih1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,7 +362,7 @@ public static void selectStu(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/20/mysql第三课/" data-id="ck22rh3dy00021sho9tldpyq6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/20/mysql第三课/" data-id="ck3ml60ta0003bkhoegq0brwu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -333,7 +399,7 @@ public static void selectStu(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/20/mysql第二课/" data-id="ck22rh3dw00011shotx3ivfsv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/20/mysql第二课/" data-id="ck3ml60tc0004bkhomg0klpb2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,7 +438,7 @@ public static void selectStu(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/myspl第一课/" data-id="ck22rh3fa00031showgadleoo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/15/myspl第一课/" data-id="ck3ml60t70002bkhojp9wlk2d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -400,7 +466,7 @@ public static void selectStu(){
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
     </div>
   </div>
 
@@ -411,6 +477,10 @@ public static void selectStu(){
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/12/01/动态网站开发第一次课讲义/">动态网站开发第一次课讲义</a>
+          </li>
         
           <li>
             <a href="/2019/10/23/JavaWeb第一课/">JavaWeb第一课</a>
@@ -426,10 +496,6 @@ public static void selectStu(){
         
           <li>
             <a href="/2019/10/20/mysql第二课/">mysql第二课</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/15/myspl第一课/">myspl第一课</a>
           </li>
         
       </ul>
